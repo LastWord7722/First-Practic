@@ -1,17 +1,16 @@
-﻿namespace ConsoleApp1;
+using ConsoleApp1.interfaces;
 
-internal static class Program
+namespace ConsoleApp1.services;
+
+public class SumTwoNumber : IHandler
 {
-    private static void Main(string[] args)
+    public void Handle()
     {
         Console.WriteLine("Input first number");
         string firstInput = Console.ReadLine() ?? "0";
         Console.WriteLine("Input second number");
         string secondInput = Console.ReadLine() ?? "0";
-        Console.WriteLine(firstInput);
-        Console.WriteLine(secondInput);
-
-        //Int32
+        
         Console.WriteLine(
             ToNumber(firstInput) + ToNumber(secondInput)
         );

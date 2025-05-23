@@ -12,15 +12,16 @@ internal static class Program
 
     public static void Run()
     {
-        Console.WriteLine("Select options: 1) two sum");
+        Console.WriteLine("Select options:\n 1) two sum \n 2) check even number");
         string choice = Console.ReadLine() ?? "-1";
         //todo: need factory to static class 
         IHandleFactory factory = new HandleClassFactory(int.TryParse(choice, out int result) ? result : -1);
         IHandler handleClass = factory.GetHandler();
         handleClass.Handle();
         
+        Console.WriteLine("You can start again? input yes or no");
         string repeat = Console.ReadLine() ?? "no";
-        if (repeat.ToLower() == "yes")
+        if (repeat.ToLower() == "yes" || repeat.ToLower() == "y")
         {
             Run();
         }

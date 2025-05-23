@@ -15,6 +15,7 @@ public class HandleClassFactory : IHandleFactory
     private static readonly Dictionary<int, Type> ClassesMap = new Dictionary<int, Type>
     {
         { 1, typeof(SumTwoNumber) },
+        { 2, typeof(EvenNumber) },
         // add more
     };
 

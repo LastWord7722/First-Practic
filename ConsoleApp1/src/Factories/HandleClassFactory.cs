@@ -1,5 +1,6 @@
 using ConsoleApp1.interfaces;
 using ConsoleApp1.services;
+using ConsoleApp1.Services.Calculator;
 
 namespace ConsoleApp1.factories;
 
@@ -16,6 +17,7 @@ public class HandleClassFactory : IHandleFactory
     {
         { 1, typeof(SumTwoNumber) },
         { 2, typeof(EvenNumber) },
+        { 3, typeof(Calculator) },
         // add more
     };
 

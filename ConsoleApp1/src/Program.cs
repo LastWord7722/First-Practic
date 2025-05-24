@@ -12,7 +12,7 @@ internal static class Program
 
     public static void Run()
     {
-        Console.WriteLine("Select options:\n 1) two sum \n 2) check even number");
+        Console.WriteLine("Select options:\n 1) two sum \n 2) check even number \n 3) calculator");
         string choice = Console.ReadLine() ?? "-1";
         //todo: need factory to static class 
         IHandleFactory factory = new HandleClassFactory(int.TryParse(choice, out int result) ? result : -1);
